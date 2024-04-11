@@ -1,0 +1,33 @@
+
+Java socket programming is used for communication between the applications running on different JRE.
+    Java socket programming can be connection-oriented or connection-less.
+Socket and Serverscoket classes are used for connection-oriented socket programming and Datagramsocket, and
+    Datagramsocket classes are used for connection-less socket programming.
+
+
+The client is socket programming must know two information:
+    1. Ip address of server, and
+    2. port number
+
+
+                                                     . . . . .
+                [        open client           ]     >       .
+                Client ----------------> connect-->write-->read-->close
+                                            .         .     <       .
+                                connection  .         .     .       . end of file
+                                   request  >         >     .       >
+                server -->bind-->listen--> accept-->read-->write-->read-->close
+                [        open listen   ]     <                              .
+                                             .  .   .   .   .   .   .   .   .
+
+                                        Socket API
+
+    Creating server:
+
+        ServerSocket s = new ServerSocket(4040);
+        Socket so = s.accept();     // establishes connection and waits for the client
+
+    Creating client:
+        Socket s = new Socket("localhost", 4040);
+
+

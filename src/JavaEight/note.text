@@ -1,0 +1,100 @@
+
+        a. concise and minimal code.
+        b. we were missing functional programming benefits in oops nature.
+        c. to enable parallel programing. more compatible code for multicore processors.
+
+    # features of java 8
+        * Lambda expressions - aynonimous function
+                not need a name, and they can be implemented right in the body of a method.
+            eg:- (x,y) -> x+y
+        * Stream api - Java stream api for bulk data operations on collections.
+        * Date and Time api
+        * Base64 Encode Decode - For Base64 encoding, Java 8 has build-in encode and decode functions. The Base64 encoding class
+            in java.util.Base64.
+
+        * Method reference and constructor reference
+                :: operator
+        * Default method in interfaces
+        * static method in interfaces
+        * Functional interface - A functional interface is an interface that has exactly one abstract method. To designate an interface as a functional
+            interface. We don't need to use the @FunctionalInterface annotation.
+        * Optional Class
+        * Java IO improvements
+        * Collection API improvements
+
+
+    # steps to make any function lambda expression
+            1. remove modifier
+            2. remove return type
+            3. remove method name
+            4. place arrow
+
+        // 2. use type interface, compiler guess the situation or context
+        private void add(int a, int b) { System.out.println(a+b); }
+        // converted to
+        (int a, int b) -> { System.out.println(a+b); }
+        // converted to
+        (a,b) -> System.out.println(a+b);
+
+        //3. no return keyword
+           private int getStringLength(String str) {return str.length};
+         // converted to
+           (String str) -> {return str.length();}
+         // converted to
+           (str) -> str.length();
+
+         // 4. if only one param remove small brackets
+            (str) -> str.length();
+         //converted to
+            str -> str.length();
+
+        // benefits of lambda expression
+            1. to enable functional programming in java
+            2. to make code more readable. maintainable and concise code
+            3. to enable parallel processing
+            4. jar file size reduction
+            5. elimination of shadow variables
+
+
+    # Default, and static method in java 8
+
+    # lambda expression
+        - Interface reference can be used to hold lambda expression.
+        - Using lambda expression we don't need to use any separate implementation class.
+
+         use - runnable interface,
+
+         * Runnable - used for creating thread
+
+    # lambda expression or anonymous inner class
+
+    # predicate - boolean-valued function (condition check true or false)
+
+    # function - operation that accepts a single input argument and produces a result.
+
+    # Consumer - operation that accepts a single input argument
+
+    # Supplier -  gets a result, and return a result
+
+    # BiPredicate, BiFunction, and BuiConsumer
+
+    # UnaryOperator, and BinaryOperator  - same data type then use
+
+    # Method references - method references allow us to refer to a method without invoking it,
+        making our code cleaner and more readable. They can be used in place of a lambda expression
+        when the lambda expression only calls an existing method.
+
+    # Constructor references -
+
+    # Stream -  collections(array, list) convert stream
+                                                    .                     map (function)
+                                                    .                     filter (predicate)
+                                                    .                     reduce ()
+                                                    declarative
+                                                    , function
+
+
+
+
+
+
